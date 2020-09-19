@@ -16,6 +16,7 @@
         public int age { get; set; }
         public string name { get; set; }
         public bool isActive { get; set; }
+        public DateTime dob { get; set; }
     }
 ```
 `Primary key must have SQLResolver Attribute with the property name as PrimaryKeyName value.: Note(the attribut should come first before any othe attributes)`
