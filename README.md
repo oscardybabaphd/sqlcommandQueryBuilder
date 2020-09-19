@@ -246,6 +246,22 @@ UPDATE user SET age=@age,name=@name,isActive=@isActive Where (([name] LIKE '%osc
 Example 3
 ***
 ```csharp
+  var items = new List<int>() { 3, 6, 2 };
+            var sql = new user().Update(
+              whereClause: x => x.name.Contains("oscar") && items.Contains(x.id),
+              selectColums: new List<string>() { "name" }
+              );
+
+```
+>Output
+
+```sql
+UPDATE user SET name=@name Where (([name] LIKE '%oscar%') AND ([id] IN (3,6,2)))
+```
+
+Example 4
+***
+```csharp
  var items = new List<int>() { 3, 6, 3, 2 };
             var sql = new user().Delete(
             whereClause: x => x.name.Contains("oscar") && items.Contains(x.id));
