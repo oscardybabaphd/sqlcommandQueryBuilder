@@ -1,5 +1,5 @@
 
-> Install-Package SQLQueryCommandBuilder -Version 1.0.1
+> Install-Package SQLQueryCommandBuilder -Version 1.0.2
 
 [Bitbucket Docs](https://bitbucket.org/sql-commandquery-builder/sqlquerycommandbuilder/src/master/README.md)
 
